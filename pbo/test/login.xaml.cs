@@ -30,7 +30,7 @@ namespace test
             this.Close();
         }
 
-        string ConnectionString = @"Data Source=C:\Users\Owner\Documents\Visual Studio 2015\Projects\psbo\psbo.db;Version=3;";
+        string ConnectionString = @"Data Source=C:\Users\Owner\Documents\Visual Studio 2015\Projects\PSBO-Sayang\pbo\psbo.db;Version=3;";
 
         private void login1_Click(object sender, RoutedEventArgs e)
         {

@@ -50,7 +50,7 @@ namespace test
         }
 
 
-        string ConnectionString = @"Data Source=C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\psbo.db;Version=3;";
+        string ConnectionString = @"Data Source=C:\Users\Owner\Documents\Visual Studio 2015\Projects\PSBO-Sayang\pbo\psbo.db;Version=3;";
 
         private void lihat_Click(object sender, RoutedEventArgs e)
         {
