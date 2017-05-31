@@ -1,0 +1,31 @@
+c:\users\owner\documents\visual studio 2015\Projects\test\test\bin\Debug\test.exe.config
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\test.exe
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\test.pdb
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\EntityFramework.dll
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\System.Data.SQLite.dll
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\System.Data.SQLite.EF6.dll
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\System.Data.SQLite.Linq.dll
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\EntityFramework.xml
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\bin\Debug\System.Data.SQLite.xml
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\App.g.cs
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test_MarkupCompile.cache
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test_MarkupCompile.lref
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test.g.resources
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test.Properties.Resources.resources
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test.csproj.GenerateResource.Cache
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test.exe
+c:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\test.pdb
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\login.g.cs
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\login.baml
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\mainadmin.g.cs
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\mainadmin.baml
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\pegawai.g.cs
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\pegawai.baml
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\tambahpegawai.g.cs
+C:\Users\Owner\Documents\Visual Studio 2015\Projects\test\test\obj\Debug\tambahpegawai.baml
+D:\Semester 6\PSBO\test\test\bin\Debug\test.exe.config
+D:\Semester 6\PSBO\test\test\obj\Debug\test.exe
+D:\Semester 6\PSBO\test\test\obj\Debug\test.pdb

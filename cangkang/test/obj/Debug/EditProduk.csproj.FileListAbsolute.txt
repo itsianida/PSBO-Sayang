@@ -1,0 +1,15 @@
+D:\Semester 6\PSBO\test\test\bin\Debug\test.exe.config
+D:\Semester 6\PSBO\test\test\obj\Debug\test.exe
+D:\Semester 6\PSBO\test\test\obj\Debug\test.pdb
+D:\Semester 6\PSBO\test\test\obj\Debug\EditProduk.csprojResolveAssemblyReference.cache
+D:\Semester 6\PSBO\test\test\obj\Debug\login.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\mainadmin.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\pegawai.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\tambahpegawai.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\DaftarProduk.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\TambahProduk.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\EditProduk.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\App.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\test_Content.g.cs
+D:\Semester 6\PSBO\test\test\obj\Debug\test_MarkupCompile.cache
+D:\Semester 6\PSBO\test\test\obj\Debug\test_MarkupCompile.lref

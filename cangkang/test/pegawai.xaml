@@ -1,0 +1,80 @@
+﻿<Window x:Class="test.pegawai"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        Title="pegawai" Height="476.5" Width="800" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFBBBBBB">
+        <Rectangle Fill="#FF3D1A55" HorizontalAlignment="Left" Height="76" Stroke="#FF3D1A55" VerticalAlignment="Top" Width="800" Margin="0,25,0,0"/>
+        <Rectangle Fill="#FF2C2C2C" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="800" Stroke="#FF2C2C2C"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="25,32,0,0" TextWrapping="Wrap" Text="Point of Sale" VerticalAlignment="Top" Foreground="#FFFFDC45" Height="40" Width="195" FontSize="29.333" FontFamily="Alegreya Sans"/>
+        <Button x:Name="mini" HorizontalAlignment="Left" Margin="710,0,0,0" VerticalAlignment="Top" Width="26" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="25" Click="mini_Click"/>
+        <Button x:Name="button1" HorizontalAlignment="Left" Margin="740,0,0,0" VerticalAlignment="Top" Width="28" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Canvas Height="10" Width="11">
+                <Path Data="M4,8H8V4H20V16H16V20H4V8M16,8V14H18V6H10V8H16M6,12V18H14V12H6Z" Fill="White" Height="10" Stretch="Fill" Width="10.333" />
+            </Canvas>
+        </Button>
+        <Path Data="M0,24H24V20H0V24Z" Fill="White" Stretch="Fill" Margin="715.454,12.985,68.586,460.913" />
+        <Button x:Name="quit" HorizontalAlignment="Left" Margin="772,0,0,0" VerticalAlignment="Top" Width="26" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="25" Click="quit_Click">
+            <Canvas Width="13" Height="13">
+                <Path Data="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" Fill="White" Stretch="Fill" Width="10.125" Height="10.5" Canvas.Top="2.5" Canvas.Left="1.25" />
+            </Canvas>
+        </Button>
+        <Canvas Margin="325,41,438,402"/>
+        <Button x:Name="button5" Content="Laporan" HorizontalAlignment="Left" Margin="85,72,0,0" VerticalAlignment="Top" Width="91" Height="28" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Cabin" FontSize="14" Foreground="#FFAAAAAA"/>
+        <Button x:Name="button7" Content="Daftar Produk" HorizontalAlignment="Left" Margin="296,72,0,0" VerticalAlignment="Top" Width="110" Height="28" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Cabin" FontSize="14" Foreground="#FFAAAAAA"/>
+        <Button x:Name="hoem" Content="Home" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Width="91" Height="28" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Cabin" Foreground="#FFAAAAAA" FontSize="14" Click="home_Click"/>
+        <Button x:Name="logout" HorizontalAlignment="Left" Margin="710,69,0,0" VerticalAlignment="Top" Width="74" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" RenderTransformOrigin="0.483,0.787" Content="Logout" FontFamily="Cabin" HorizontalContentAlignment="Right" Click="logout_Click"/>
+        <Path Data="M17,17.25V14H10V10H17V6.75L22.25,12L17,17.25M13,2A2,2 0 0,1 15,4V8H13V4H4V20H13V16H15V20A2,2 0 0,1 13,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2H13Z" Fill="White" RenderTransformOrigin="-2.4,3.254" Stretch="Fill" Margin="713.384,73.512,61.202,379.267" />
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="376" Margin="0,100,0,0" VerticalAlignment="Top" Width="800" BorderBrush="#FFBBBBBB" Background="#FFBBBBBB"/>
+        <TabItem Header="Daftar Pegawai" Margin="176,72,504,376" FontFamily="Cabin" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF3D1A55" Foreground="White" BorderBrush="#FF3D1A55" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Height="28" Padding="15,2,6,2">
+            <Grid Background="#FFE5E5E5"/>
+        </TabItem>
+        <Viewbox Margin="362,212,365,197">
+            <Canvas Width="24" Height="24"/>
+        </Viewbox>
+        <Viewbox Margin="362,212,365,197"/>
+        <Viewbox Margin="362,212,365,197"/>
+        <Viewbox Margin="362,212,365,197"/>
+        <Button x:Name="tampeg" Content="Tambah" HorizontalAlignment="Left" Margin="15,115,0,0" VerticalAlignment="Top" Width="91" Background="#FF84FF70" BorderBrush="#FF84FF70" FontSize="10.667" FontFamily="Cabin" Height="24" Click="tambah_Click"/>
+        <Button x:Name="button4" Content="Edit" HorizontalAlignment="Left" Margin="137,115,0,0" VerticalAlignment="Top" Width="91" FontSize="10.667" Background="#FFFFDC45" BorderBrush="#FFFFDC45" FontFamily="Cabin" Height="24"/>
+        <Button x:Name="button10" Content="Hapus" HorizontalAlignment="Left" Margin="258,115,0,0" VerticalAlignment="Top" Width="92" FontSize="10.667" BorderBrush="#FFFF3939" Background="#FFFF3939" FontFamily="Cabin" Height="24"/>
+        <Viewbox Width="48" Height="48" Margin="376,214"/>
+        <Button Background="#FF3D1A55" Margin="384,109,380,331">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3D1A55"/>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+            <Canvas Width="24" Height="24">
+                <Path Data="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" Fill="#FFFFDC45" />
+            </Canvas>
+        </Button>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="308" Margin="15,153,0,0" VerticalAlignment="Top" Width="768"/>
+        <Viewbox Width="48" Height="48" Margin="376,209,376,219">
+            <Canvas Width="24" Height="24"/>
+        </Viewbox>
+        <Rectangle Fill="#FFF0ECEC" HorizontalAlignment="Left" Height="34" Margin="15,153,0,0" VerticalAlignment="Top" Width="768"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="562,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Background="#FFF3F3F3" BorderBrush="#FF3D1A55" Foreground="White" FontFamily="Cabin"/>
+        <Button x:Name="button" HorizontalAlignment="Left" Margin="757,118,0,0" VerticalAlignment="Top" Width="26" Height="23" BorderBrush="#FF3D1A55" Background="#FF3D1A55">
+            <Path Data="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" Fill="White" Height="19" Width="16" Stretch="Fill" />
+        </Button>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="59,162,0,0" TextWrapping="Wrap" Text="Urutkan berdasarkan    :" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="204,159,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFF3F3F3" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <RadioButton x:Name="radioButton" Content="Ascending" HorizontalAlignment="Left" Margin="529,163,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton1" Content="Descending" HorizontalAlignment="Left" Margin="633,163,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="411,162,0,0" TextWrapping="Wrap" Text="Urutkan secara    :" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
