@@ -43,14 +43,13 @@ namespace test
                 bool status= repo.login(akun);
                 if (status)
                 {
-                    MessageBox.Show("Login berhasil!", "Login", MessageBoxButton.OK, MessageBoxImage.Information);
                     menuadmin menu = new menuadmin();
                     menu.Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Password atau username salah", "Error!", MessageBoxButton.OK,MessageBoxImage.Error);
+                    MessageBox.Show("Password atau username salah");
                 }
             }
             catch (Exception ex)
