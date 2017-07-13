@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using test.model;
+using test.repository;
 
 namespace test
 {
@@ -19,13 +21,51 @@ namespace test
     /// </summary>
     public partial class tambahpegawai : Window
     {
+        private Akun akun = new Akun();
+        private IAkunRepository repo = new AkunRepository();
         public tambahpegawai()
         {
             InitializeComponent();
+            AddPegawai.DataContext = akun;
+
         }
 
         private void quit_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            akun.Username = username.Text;
+            akun.Password = password.Password;
+            try
+            {
+                bool status = repo.tambah(akun);
+                if (status)
+                {
+                    repo.Add(akun);
+                    MessageBox.Show("Akun anda telah berhasil ditambahkan.", "Tambah Akun", MessageBoxButton.OK, MessageBoxImage.Information);
+                    menuadmin update = new test.menuadmin();
+                    update.tabControl1.SelectedIndex = 2;
+                    update.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("username sudah dipakai, coba username lain", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cancel_Click(object sender, RoutedEventArgs e)
+        {
+            menuadmin update = new test.menuadmin();
+            update.Show();
             this.Close();
         }
     }
