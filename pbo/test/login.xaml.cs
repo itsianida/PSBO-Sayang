@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SQLite;
-
+using test.repository;
+using test.model;
 namespace test
 {
     /// <summary>
@@ -20,44 +21,36 @@ namespace test
     /// </summary>
     public partial class login : Window
     {
+        private Akun akun = new Akun();
+        private IAkunRepository repo = new AkunRepository();
         public login()
         {
             InitializeComponent();
         }
-
+     
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        string ConnectionString = @"Data Source=C:\Users\Owner\Documents\Visual Studio 2015\Projects\PSBO-Sayang\pbo\psbo.db;Version=3;";
-
+     
         private void login1_Click(object sender, RoutedEventArgs e)
         {
-            SQLiteConnection sqliteCon = new SQLiteConnection(ConnectionString);
+            akun.Username = username.Text;
+            akun.Password = password.Password;
             try
             {
-                sqliteCon.Open();
-                string Query = "SELECT [id_admin],[username],[password] FROM [akun] where username ='" + this.username.Text + "' and password='" + this.password.Password + "' ";
-                SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
-
-                createCommand.ExecuteNonQuery();
-                SQLiteDataReader dr = createCommand.ExecuteReader();
-
-                int count = 0;
-                while (dr.Read())
+                bool status= repo.login(akun);
+                if (status)
                 {
-                    count++;
-                }
-                if (count == 1)
-                { 
-                    menuadmin tampil = new menuadmin();
-                    tampil.Show();
+                    MessageBox.Show("Login berhasil!", "Login", MessageBoxButton.OK, MessageBoxImage.Information);
+                    menuadmin menu = new menuadmin();
+                    menu.Show();
                     this.Close();
                 }
-                if (count < 1)
+                else
                 {
-                    MessageBox.Show("Username and password is not correct");
+                    MessageBox.Show("Password atau username salah", "Error!", MessageBoxButton.OK,MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)

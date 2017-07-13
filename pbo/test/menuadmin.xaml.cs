@@ -17,6 +17,8 @@ using test.repository;
 using test.model;
 using static System.Object;
 using static System.Windows.Forms.TabControl;
+using test;
+
 
 
 namespace test
@@ -28,16 +30,15 @@ namespace test
     public partial class menuadmin : Window
     {
         private Akun akun = new Akun();
-        private IAkunRepository repo = new AkunRepository();
         private Barang barang = new Barang();
+        private IAkunRepository repo = new AkunRepository();
         private IBarangRepository repobar = new BarangRepository();
-        private List<int> listselected;
+        private List<long> listselected;
         public menuadmin()
         {
             InitializeComponent();
             dataGrid.ItemsSource = repo.Get();
-            dgbarang.ItemsSource = repobar.Get();
-            listselected = new List<int>();
+            listselected = new List<long>();
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
@@ -55,7 +56,7 @@ namespace test
                 if (((CheckBox)element).IsChecked == true)
                 {
                     FrameworkElement cellEmpNo = dataGrid.Columns[1].GetCellContent(e.Row);
-                    int nomor = Convert.ToInt32(((TextBlock)cellEmpNo).Text);
+                    long nomor = Convert.ToInt32(((TextBlock)cellEmpNo).Text);
                     listselected.Add(nomor);
                 }
             }
@@ -70,41 +71,37 @@ namespace test
 
         private void hapeg_Click(object sender, RoutedEventArgs e)
         {
-
-            try
+            using (var context = new PsboContext())
             {
-                if (listselected.Count() > 0)
+                try
                 {
-                    int count = 0;
-                    foreach (int eno in listselected)
+                    if (listselected.Count() > 0)
                     {
-                        Akun emp = (from ep in repo.Get() where ep.IdPegawai == eno select ep).First();
-                        repo.Delete(emp);
-                        count++;
+                        if (MessageBox.Show("Anda yakin akan menghapus " + listselected.Count() + " akun?", "Hapus", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+                        {
+                            int count = 0;
+                            foreach (long eno in listselected)
+                            {
+                                Akun emp = context.Akun.Where(o => o.IdPegawai == eno).FirstOrDefault();
+                                repo.Delete(emp);
+                                count++;
+                            }
+                            MessageBox.Show(count + " akun telah dihapus","Hapus",MessageBoxButton.OK,MessageBoxImage.Information);
+                        }
+                        else
+                        {
+                           
+                        }
                     }
-                    MessageBox.Show(count + " Row's Deleted");
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            menuadmin aha = new menuadmin();
-            this.Close();
-            aha.tabControl1.SelectedIndex = 2;
-            aha.Show();
-        }
-
-
-        private void lihat_Click(object sender, RoutedEventArgs e)
-        {
-           
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                menuadmin aha = new menuadmin();
+                this.Close();
+                aha.tabControl1.SelectedIndex = 2;
+                aha.Show();
             }
         }
 
@@ -115,9 +112,14 @@ namespace test
 
         void editpegawai_Click(object sender, RoutedEventArgs e)
         {
-            Akun akun = (Akun)dataGrid.SelectedItems[0];
-            editpegawai eb = new editproduk(edit);
-            eb.Show();
+                          
+            Akun edit = (Akun)dataGrid.SelectedItems[0];
+           
+            editpegawai ep = new editpegawai(edit);
+            ep.Show();
+            
+           
+            
             this.Close();
         }
 
@@ -128,23 +130,9 @@ namespace test
             this.Close();
         }
 
-        private void datag_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
-        {
-            FrameworkElement element = dgbarang.Columns[0].GetCellContent(e.Row);
-            if (element.GetType() == typeof(CheckBox))
-            {
-                if (((CheckBox)element).IsChecked == true)
-                {
-                    FrameworkElement cellEmpNo = dgbarang.Columns[1].GetCellContent(e.Row);
-                    int nomor = Convert.ToInt32(((TextBlock)cellEmpNo).Text);
-                    listselected.Add(nomor);
-                }
-            }
-        }
-
         private void hapusbarang_Click(object sender, RoutedEventArgs e)
-        {
-
+        { 
+  
             try
             {
                 if (listselected.Count() > 0)
@@ -163,28 +151,10 @@ namespace test
             {
                 MessageBox.Show(ex.Message);
             }
-            menuadmin muncul = new menuadmin();
+            menuadmin aha = new menuadmin();
             this.Close();
-            muncul.tabControl1.SelectedIndex = 3;
-            muncul.Show();
-        }
-
-        private void dgbarang_SelectionnChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-        
-        private void editbarang_Click (object sender, RoutedEventArgs e)
-        {
-            Barang edit = (Barang)dgbarang.SelectedItems[0];
-            editproduk eb = new editproduk(edit);
-            eb.Show();
-            this.Close();
-        }
-
-        private void descbar_Checked(object sender, RoutedEventArgs e)
-        {
-
+            aha.tabControl1.SelectedIndex = 2;
+            aha.Show();
         }
     }
 }
