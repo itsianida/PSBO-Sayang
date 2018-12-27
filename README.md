@@ -1,2 +1,6 @@
 # PSBO-Sayang
-Tugas PSBO kelompok ciway
+Tugas PSBO
+- Larasati
+- Siti Nadia Nurhidayah
+- Regita Wilia Sekarsih
+- Kurnia Wijayanti
